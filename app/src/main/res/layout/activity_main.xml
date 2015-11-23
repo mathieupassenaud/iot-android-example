@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer"
+        android:id="@+id/accelerometer"
+        android:checked="false"
+        android:enabled="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/MagneticField" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ambiant Temperature"
+        android:id="@+id/ambiantTemperature"
+        android:layout_below="@+id/accelerometer"
+        android:checked="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gravity"
+        android:id="@+id/Gravity"
+        android:layout_below="@+id/ambiantTemperature"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:layout_alignRight="@+id/ambiantTemperature"
+        android:layout_alignEnd="@+id/ambiantTemperature"
+        android:enabled="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gyroscope"
+        android:id="@+id/Gyroscope"
+        android:layout_below="@+id/Gravity"
+        android:layout_alignRight="@+id/Gravity"
+        android:layout_alignEnd="@+id/Gravity"
+        android:checked="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Light"
+        android:id="@+id/Light"
+        android:layout_below="@+id/Gyroscope"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:enabled="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linear Acceleration"
+        android:id="@+id/LinearAcceleration"
+        android:layout_below="@+id/Light"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:enabled="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magnetic Field"
+        android:id="@+id/MagneticField"
+        android:layout_below="@+id/LinearAcceleration"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:enabled="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orientation"
+        android:id="@+id/Orientation"
+        android:checked="false"
+        android:layout_above="@+id/ambiantTemperature"
+        android:layout_alignEnd="@+id/tokenID"
+        android:layout_marginEnd="24dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressure"
+        android:id="@+id/Pressure"
+        android:checked="false"
+        android:enabled="false"
+        android:layout_below="@+id/Proximity"
+        android:layout_alignStart="@+id/Proximity" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proximity"
+        android:id="@+id/Proximity"
+        android:checked="false"
+        android:enabled="false"
+        android:layout_below="@+id/Orientation"
+        android:layout_alignStart="@+id/Orientation" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity"
+        android:id="@+id/RelativeHumidity"
+        android:checked="false"
+        android:enabled="false"
+        android:layout_below="@+id/Pressure"
+        android:layout_alignStart="@+id/Pressure" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotation"
+        android:id="@+id/Rotation"
+        android:checked="false"
+        android:enabled="false"
+        android:layout_below="@+id/RelativeHumidity"
+        android:layout_alignStart="@+id/Pressure" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:id="@+id/Temperature"
+        android:checked="false"
+        android:layout_alignTop="@+id/LinearAcceleration"
+        android:layout_alignLeft="@+id/Rotation"
+        android:layout_alignStart="@+id/Rotation"
+        android:enabled="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tokenID"
+        android:text="tokenID"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/MagneticField"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TockenSecret"
+        android:layout_below="@+id/tokenID"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="tokenSecret"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deviceId"
+        android:layout_below="@+id/TockenSecret"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="deviceId"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP"
+        android:id="@+id/stop"
+        android:enabled="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/TockenSecret"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/TockenSecret"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/status"
+        android:layout_below="@+id/deviceId"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/button" />
+
+</RelativeLayout>
